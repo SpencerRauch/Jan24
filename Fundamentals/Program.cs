@@ -1,4 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using System.Runtime.ExceptionServices;
+
 Console.WriteLine("Hello, World! Look I did something!");
 
 int Age = 35;
@@ -52,4 +54,25 @@ foreach(KeyValuePair<string,int> entry in PetAges)
 }
 
 
+static void SayHello()
+{
+    Console.WriteLine("Hello how are you doing today?");
+}
+
+static int MathingTheMath(int numA, int numB = 9)
+{
+    // return numA * numB;
+    return numA * numB;
+}
+
+// static int MathingTheMath(int numA)
+// {
+//     // return numA * numB;
+//     return numA * numB;
+// }
+SayHello();
+
+int Result = MathingTheMath(3);
+Console.WriteLine(Result);
+Console.WriteLine();
 
