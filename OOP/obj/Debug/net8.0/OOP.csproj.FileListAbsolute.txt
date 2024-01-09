@@ -1,0 +1,15 @@
+C:\stacks\CSharp\Jan24\OOP\bin\Debug\net8.0\OOP.exe
+C:\stacks\CSharp\Jan24\OOP\bin\Debug\net8.0\OOP.deps.json
+C:\stacks\CSharp\Jan24\OOP\bin\Debug\net8.0\OOP.runtimeconfig.json
+C:\stacks\CSharp\Jan24\OOP\bin\Debug\net8.0\OOP.dll
+C:\stacks\CSharp\Jan24\OOP\bin\Debug\net8.0\OOP.pdb
+C:\stacks\CSharp\Jan24\OOP\obj\Debug\net8.0\OOP.GeneratedMSBuildEditorConfig.editorconfig
+C:\stacks\CSharp\Jan24\OOP\obj\Debug\net8.0\OOP.AssemblyInfoInputs.cache
+C:\stacks\CSharp\Jan24\OOP\obj\Debug\net8.0\OOP.AssemblyInfo.cs
+C:\stacks\CSharp\Jan24\OOP\obj\Debug\net8.0\OOP.csproj.CoreCompileInputs.cache
+C:\stacks\CSharp\Jan24\OOP\obj\Debug\net8.0\OOP.sourcelink.json
+C:\stacks\CSharp\Jan24\OOP\obj\Debug\net8.0\OOP.dll
+C:\stacks\CSharp\Jan24\OOP\obj\Debug\net8.0\refint\OOP.dll
+C:\stacks\CSharp\Jan24\OOP\obj\Debug\net8.0\OOP.pdb
+C:\stacks\CSharp\Jan24\OOP\obj\Debug\net8.0\OOP.genruntimeconfig.cache
+C:\stacks\CSharp\Jan24\OOP\obj\Debug\net8.0\ref\OOP.dll
