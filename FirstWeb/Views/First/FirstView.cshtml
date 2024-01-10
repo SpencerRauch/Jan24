@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello I'm the First View</h1>
+    @{
+        List<string> Names = new(){"Bob","Alex","Alice"};
+        <p>@Names[0]</p>
+    }
+
+    @foreach (string name in Names)
+    {
+        if (name == "Alice")
+        {
+            <img src="~/img/cake.jpg" alt="a two tiered cake with flowers">
+            <p>Welcome in my favorite user! </p>
+        }
+        <p>@(name + " Lastname")</p>
+    }
+
+</body>
+</html>
