@@ -19329,6 +19329,16 @@
   "RootNamespace": "FirstWeb",
   "Documents": [
     {
+      "FilePath": "c:\\stacks\\CSharp\\Jan24\\FirstWeb\\Views\\First\\SecretPage.cshtml",
+      "TargetPath": "Views\\First\\SecretPage.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\stacks\\CSharp\\Jan24\\FirstWeb\\Views\\First\\Form.cshtml",
+      "TargetPath": "Views\\First\\Form.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\stacks\\CSharp\\Jan24\\FirstWeb\\Views\\First\\Params.cshtml",
       "TargetPath": "Views\\First\\Params.cshtml",
       "FileKind": "mvc"
