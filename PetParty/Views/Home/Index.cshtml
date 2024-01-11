@@ -1,9 +1,29 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
-    Layout = null;
+    ViewData["Title"] = "PetParty Form";
 }
-
+@model Pet
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <form asp-action="CreatePet" asp-controller="Home" method="post">
+        <div class="mb-3">
+            <label asp-for="Name"></label>
+            <input asp-for="Name">
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Species"></label>
+            <input asp-for="Species">
+            <span asp-validation-for="Species" class="text-danger"></span>
+        </div>
+        <div class="mb-3">
+            <label asp-for="Age"></label>
+            <input asp-for="Age">
+            <span asp-validation-for="Age" class="text-danger"></span>            
+        </div>
+        <div class="mb-3">
+            <label asp-for="IsCute"></label>
+            <input asp-for="IsCute">
+        </div>
+        <button class="btn btn-primary">Register Pet</button>
+    </form>
+    <a asp-action="AllPets" asp-controller="Home" class="btn btn-info">All Pets</a>
 </div>
