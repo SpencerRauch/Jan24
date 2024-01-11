@@ -313,7 +313,7 @@ class SinglyLinkedList {
         while (runner) {
             // End of list and not found.
             if (runner.next === null) {
-                return null;
+                return false;
             }
 
             if (runner.next.data === targetVal) {
