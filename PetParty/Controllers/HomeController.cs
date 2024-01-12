@@ -23,7 +23,7 @@ public class HomeController : Controller
             new SelectListItem("---choose---","",true,true),
             new SelectListItem("Bear", "Bear"),
             new SelectListItem("Deer", "Deer"),
-            new SelectListItem("Bob", "Bob")
+            new SelectListItem("Bobcat", "Bobcat")
         };
         return View("Index");
     }
@@ -44,14 +44,43 @@ public class HomeController : Controller
             return Index();
         }
         FakePetDb.Add(newPet);
+        HttpContext.Session.SetString("LastPet", newPet.Name);
         // Console.WriteLine($"{newPet.Name} is a {newPet.Age} year(s) old {newPet.Species} -- they {(newPet.IsCute ? "are" : "aren't")} cute");
         return RedirectToAction("AllPets");
     }
 
     [HttpGet("pets")]
-    public ViewResult AllPets()
+    public IActionResult AllPets()
     {
+        // string? LastPet = HttpContext.Session.GetString("LastPet");
+        if (HttpContext.Session.GetString("LastPet") == null)
+        {
+            return RedirectToAction("Index");
+        }
         return View("AllPets",FakePetDb);
+    }
+
+    [HttpPost("pets/filter/")]
+    public RedirectToActionResult SetFilter(int limit)
+    {
+        HttpContext.Session.SetInt32("Limit", limit);
+        return RedirectToAction("AllPets");
+    }
+
+    [HttpGet("pets/filter/{limit}")]
+    public RedirectToActionResult SetFilterParam(int limit)
+    {
+        HttpContext.Session.SetInt32("Limit", limit);
+        return RedirectToAction("AllPets");
+    }
+
+    [HttpPost("pets/filter/clear")]
+    public RedirectToActionResult ClearFilter()
+    {
+        // HttpContext.Session.Clear(); // this will clear session completely
+        HttpContext.Session.Remove("Limit");
+        return RedirectToAction("AllPets");
+
     }
 
     public IActionResult Privacy()
