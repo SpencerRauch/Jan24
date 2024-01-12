@@ -334,7 +334,18 @@ class SinglyLinkedList {
      * @returns {SinglyLinkedList} This list with the added nodes.
      */
     concat(addList) {
-        //your code here
+        let runner = this.head;
+
+        if (runner === null) {
+            this.head = addList.head;
+            return this
+        } 
+        while (runner.next) {
+            runner = runner.next;
+        }
+        runner.next = addList.head;
+    
+        return this;
     }
 
     /**
@@ -345,7 +356,30 @@ class SinglyLinkedList {
      * @returns {SinglyLinkedList} This list.
      */
     moveMinToFront() {
-        //your code here
+        if (this.isEmpty()) {
+            return this;
+        }
+
+        let minNode = this.head;
+        let runner = this.head;
+        let prev = this.head;
+
+        while (runner.next) {
+            if (runner.next.data < minNode.data) {
+                prev = runner;
+                minNode = runner.next;
+            }
+            runner = runner.next;
+        }
+
+        if (minNode === this.head) {
+            return this;
+        }
+
+        prev.next = minNode.next;
+        minNode.next = this.head;
+        this.head = minNode;
+        return this;
     }    
 }
 
