@@ -361,8 +361,18 @@ const biNodeList = new SinglyLinkedList().insertAtBackMany([1, 2]);
 const firstThreeList = new SinglyLinkedList().insertAtBackMany([1, 2, 3]);
 const secondThreeList = new SinglyLinkedList().insertAtBackMany([4, 5, 6]);
 const unorderedList = new SinglyLinkedList().insertAtBackMany([
--5, -10, 4, -3, 6, 1, -7, -2,
+-5, -10, 4, -3, 6, 1, -7, -2
 ]);
+
+
+// Test case for concat
+firstThreeList.concat(secondThreeList);
+console.log(firstThreeList.toArr(), "should be", "[1, 2, 3, 4, 5, 6]")
+
+//Test case for move min to front
+unorderedList.moveMinToFront();
+console.log(unorderedList.toArr(), "should be", "[-10, -5, 4, -3, 6, 1, -7, 2]")
+
 
   /* node 4 connects to node 1, back to head */
   // const perfectLoopList = new SinglyLinkedList().insertAtBackMany([1, 2, 3, 4]);
