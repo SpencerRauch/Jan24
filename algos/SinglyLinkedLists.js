@@ -360,25 +360,25 @@ class SinglyLinkedList {
             return this;
         }
 
-        let minNode = this.head;
-        let runner = this.head;
-        let prev = this.head;
+        let minNode = this.head; // will point to the node with the min val
+        let runner = this.head; // our iterative variable to traverse the list
+        let prev = this.head; // will store a reference to the node BEFORE the minimum
 
-        while (runner.next) {
-            if (runner.next.data < minNode.data) {
-                prev = runner;
-                minNode = runner.next;
+        while (runner.next) { //consider the next node
+            if (runner.next.data < minNode.data) { //if the data is less than the min
+                prev = runner; //runner is before the min
+                minNode = runner.next; //runner.next is the min
             }
-            runner = runner.next;
+            runner = runner.next; //traverse forward
         }
 
-        if (minNode === this.head) {
+        if (minNode === this.head) { //if the minNode is already the head, we're done
             return this;
         }
 
-        prev.next = minNode.next;
-        minNode.next = this.head;
-        this.head = minNode;
+        prev.next = minNode.next; //point the node before the min to the node after the min
+        minNode.next = this.head; //point the minNode to the the head (moving it to the front)
+        this.head = minNode; //call the minNode the new head
         return this;
     }    
 }
