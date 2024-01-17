@@ -136,7 +136,34 @@ class BinarySearchTree {
      * @returns {BinarySearchTree} This tree.
      */
     insert(newVal) {
-        //your code here
+        const node = new BSTNode(newVal);
+
+        //if empty, make the new root
+        if (this.isEmpty()) {
+            this.root = node;
+            return this;
+        }
+
+        let current = this.root;
+
+        while (true) {
+            if (newVal <= current.data) { // if less or equal, go left
+                if (current.left === null) { // if there is no left, insert here
+                    current.left = node;
+                    return this;
+                }
+
+                current = current.left;
+            } else {
+                // newVal is greater than current.data
+                if (current.right === null) { // if there is no right, insert here
+                    current.right = node;
+                    return this;
+                }
+
+                current = current.right;
+            }
+        }
     }
 
     /**
@@ -150,7 +177,24 @@ class BinarySearchTree {
      * @returns {BinarySearchTree} This tree.
      */
     insertRecursive(newVal, curr = this.root) {
-        //your code here
+        if (this.isEmpty()) {
+            this.root = new BSTNode(newVal);
+            return this;
+        }
+
+        if (newVal > curr.data) {
+            if (curr.right === null) {
+                curr.right = new BSTNode(newVal);
+                return this;
+            }
+            return this.insertRecursive(newVal, curr.right);
+        }
+
+        if (curr.left === null) {
+            curr.left = new BSTNode(newVal);
+            return this;
+        }
+        return this.insertRecursive(newVal, curr.left);
     }
 
 
@@ -214,68 +258,68 @@ threeLevelTree.root.right.left = new BSTNode(13);
 
 
 
-// /***************** Uncomment after insert method is created. ****************/
-// const fullTree = new BinarySearchTree();
-// fullTree
-//     .insert(25)
-//     .insert(15)
-//     .insert(10)
-//     .insert(22)
-//     .insert(4)
-//     .insert(12)
-//     .insert(18)
-//     .insert(24)
-//     .insert(50)
-//     .insert(35)
-//     .insert(70)
-//     .insert(31)
-//     .insert(44)
-//     .insert(66)
-//     .insert(90);
+/***************** Uncomment after insert method is created. ****************/
+const fullTree = new BinarySearchTree();
+fullTree
+    .insert(25)
+    .insert(15)
+    .insert(10)
+    .insert(22)
+    .insert(4)
+    .insert(12)
+    .insert(18)
+    .insert(24)
+    .insert(50)
+    .insert(35)
+    .insert(70)
+    .insert(31)
+    .insert(44)
+    .insert(66)
+    .insert(90);
 
-// /* fullTree
-//                     root
-//                 <-- 25 -->
-//               /            \
-//             15             50
-//           /    \         /    \
-//         10     22      35     70
-//       /   \   /  \    /  \   /  \
-//     4    12  18  24  31  44 66  90
+/* fullTree
+                    root
+                <-- 25 -->
+              /            \
+            15             50
+          /    \         /    \
+        10     22      35     70
+      /   \   /  \    /  \   /  \
+    4    12  18  24  31  44 66  90
 
-// */
+*/
 
-// fullTree.print();
+fullTree.print();
 
-// /***************** Uncomment after insert recursive method is created. ****************/
-// const fullTreeRecursive = new BinarySearchTree();
-// fullTreeRecursive
-//     .insertRecursice(25)
-//     .insertRecursice(15)
-//     .insertRecursice(10)
-//     .insertRecursice(22)
-//     .insertRecursice(4)
-//     .insertRecursice(12)
-//     .insertRecursice(18)
-//     .insertRecursice(24)
-//     .insertRecursice(50)
-//     .insertRecursice(35)
-//     .insertRecursice(70)
-//     .insertRecursice(31)
-//     .insertRecursice(44)
-//     .insertRecursice(66)
-//     .insertRecursice(90);
+/***************** Uncomment after insert recursive method is created. ****************/
+const fullTreeRecursive = new BinarySearchTree();
+fullTreeRecursive
+    .insertRecursive(25)
+    .insertRecursive(15)
+    .insertRecursive(10)
+    .insertRecursive(22)
+    .insertRecursive(4)
+    .insertRecursive(12)
+    .insertRecursive(18)
+    .insertRecursive(24)
+    .insertRecursive(50)
+    .insertRecursive(35)
+    .insertRecursive(70)
+    .insertRecursive(31)
+    .insertRecursive(44)
+    .insertRecursive(66)
+    .insertRecursive(90);
 
-// /* fullTree
-//                     root
-//                 <-- 25 -->
-//               /            \
-//             15             50
-//           /    \         /    \
-//         10     22      35     70
-//       /   \   /  \    /  \   /  \
-//     4    12  18  24  31  44 66  90
+/* fullTree
+                    root
+                <-- 25 -->
+              /            \
+            15             50
+          /    \         /    \
+        10     22      35     70
+      /   \   /  \    /  \   /  \
+    4    12  18  24  31  44 66  90
 
-// */
+*/
 
-// fullTreeRecursive.print();
+fullTreeRecursive.print();
