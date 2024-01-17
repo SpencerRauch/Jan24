@@ -1,6 +1,7 @@
 /**
  * Class to represent a Node in a Binary Search Tree (BST).
  */
+// https://www.cs.usfca.edu/~galles/visualization/BST.html
 class BSTNode {
     /**
      * Constructs a new instance of a BST node.
@@ -48,7 +49,6 @@ class BinarySearchTree {
         //your code here
         return this.root === null;
     }
-
     /**
      * Retrieves the smallest integer data from this tree.
      * - Time: O(?).
@@ -59,6 +59,14 @@ class BinarySearchTree {
      */
     min(current = this.root) {
         //your code here
+        if (current === null) {
+            return null;
+        }
+
+        while (current.left) {
+            current = current.left;
+        }
+        return current.data;
     }
 
     /**
@@ -70,7 +78,14 @@ class BinarySearchTree {
      * @returns {number} The smallest integer from this tree.
      */
     minRecursive(current = this.root) {
-        //your code
+        if (current === null) {
+            return null;
+        }
+
+        if (current.left === null) {
+            return current.data;
+        }
+        return this.minRecursive(current.left);
     }
 
     /**
@@ -82,7 +97,14 @@ class BinarySearchTree {
      * @returns {number} The largest integer from this tree.
      */
     max(current = this.root) {
-        //your code here
+        if (current === null) {
+            return null;
+        }
+
+        while (current.right) {
+            current = current.right;
+        }
+        return current.data;
     }
 
     /**
@@ -94,8 +116,43 @@ class BinarySearchTree {
      * @returns {number} The largest integer from this tree.
      */
     maxRecursive(current = this.root) {
+        if (current === null) {
+            return null;
+        }
+
+        if (current.right === null) {
+            return current.data;
+        }
+        return this.maxRecursive(current.right);
+    }
+
+
+    /**
+     * Inserts a new node with the given newVal in the right place to preserver
+     * the order of this tree.
+     * - Time: O(?).
+     * - Space: O(?).
+     * @param {number} newVal The data to be added to a new node.
+     * @returns {BinarySearchTree} This tree.
+     */
+    insert(newVal) {
         //your code here
     }
+
+    /**
+     * Inserts a new node with the given newVal in the right place to preserver
+     * the order of this tree.
+     * - Time: O(?).
+     * - Space: O(?).
+     * @param {number} newVal The data to be added to a new node.
+     * @param {Node} curr The node that is currently accessed from the tree as
+     *    the tree is being traversed.
+     * @returns {BinarySearchTree} This tree.
+     */
+    insertRecursive(newVal, curr = this.root) {
+        //your code here
+    }
+
 
     // Logs this tree horizontally with the root on the left.
     print(node = this.root, spaceCnt = 0, spaceIncr = 10) {
@@ -145,13 +202,13 @@ threeLevelTree.root.left.right = new BSTNode(6);
 threeLevelTree.root.right = new BSTNode(15);
 threeLevelTree.root.right.left = new BSTNode(13);
 
-/* threeLevelTree 
+/* threeLevelTree
         root
         10
       /   \
     5     15
   / \    / \
-2   6  13  
+2   6  13
 */
 // threeLevelTree.print();
 
