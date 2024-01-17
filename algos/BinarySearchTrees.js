@@ -246,3 +246,36 @@ threeLevelTree.root.right.left = new BSTNode(13);
 // */
 
 // fullTree.print();
+
+// /***************** Uncomment after insert recursive method is created. ****************/
+// const fullTreeRecursive = new BinarySearchTree();
+// fullTreeRecursive
+//     .insertRecursice(25)
+//     .insertRecursice(15)
+//     .insertRecursice(10)
+//     .insertRecursice(22)
+//     .insertRecursice(4)
+//     .insertRecursice(12)
+//     .insertRecursice(18)
+//     .insertRecursice(24)
+//     .insertRecursice(50)
+//     .insertRecursice(35)
+//     .insertRecursice(70)
+//     .insertRecursice(31)
+//     .insertRecursice(44)
+//     .insertRecursice(66)
+//     .insertRecursice(90);
+
+// /* fullTree
+//                     root
+//                 <-- 25 -->
+//               /            \
+//             15             50
+//           /    \         /    \
+//         10     22      35     70
+//       /   \   /  \    /  \   /  \
+//     4    12  18  24  31  44 66  90
+
+// */
+
+// fullTreeRecursive.print();
