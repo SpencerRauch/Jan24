@@ -205,7 +205,17 @@ class BinarySearchTree {
  * @returns {boolean} Indicates if the searchVal was found.
  */
     contains(searchVal) {
-        //your code here
+        let current = this.root;
+
+        while (current) {
+            if (current.data === searchVal) return true;
+            if (searchVal <= current.data) {
+                current = current.left;
+            } else {
+                current = current.right;
+            }
+        }
+        return false;
     }
 
     /**
@@ -216,7 +226,10 @@ class BinarySearchTree {
      * @returns {boolean} Indicates if the searchVal was found.
      */
     containsRecursive(searchVal, current = this.root) {
-        //your code here
+        if (current === null) return false;
+        if (current.data === searchVal) return true;
+        if (searchVal <= current.data) return this.containsRecursive(searchVal, current.left);
+        return this.containsRecursive(searchVal, current.right);
     }
 
 
