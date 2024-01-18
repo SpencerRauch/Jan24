@@ -197,6 +197,29 @@ class BinarySearchTree {
         return this.insertRecursive(newVal, curr.left);
     }
 
+    /**
+ * Determines if this tree contains the given searchVal.
+ * - Time: O(?).
+ * - Space: O(?).
+ * @param {number} searchVal The number to search for in the node's data.
+ * @returns {boolean} Indicates if the searchVal was found.
+ */
+    contains(searchVal) {
+        //your code here
+    }
+
+    /**
+     * Determines if this tree contains the given searchVal.
+     * - Time: O(?).
+     * - Space: O(?).
+     * @param {number} searchVal The number to search for in the node's data.
+     * @returns {boolean} Indicates if the searchVal was found.
+     */
+    containsRecursive(searchVal, current = this.root) {
+        //your code here
+    }
+
+
 
     // Logs this tree horizontally with the root on the left.
     print(node = this.root, spaceCnt = 0, spaceIncr = 10) {
