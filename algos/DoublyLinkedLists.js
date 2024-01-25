@@ -46,6 +46,16 @@ class DoublyLinkedList {
      */
     insertAtFront(data) {
         //Your code here
+        let newHead = new DLLNode(data);
+        if (this.isEmpty()) {
+            this.head = newHead;
+            this.tail = newHead;
+        } else {
+            this.head.prev = newHead;
+            newHead.next = this.head;
+            this.head = newHead;
+        }
+        return this;
     }
     /**
      * Creates a new node and adds it at the back of this list.
@@ -56,6 +66,16 @@ class DoublyLinkedList {
      */
     insertAtBack(data) {
         //Your code here
+        let newTail = new DLLNode(data);
+        if (this.isEmpty()) {
+            this.head = newTail;
+            this.tail = newTail;
+        } else {
+            this.tail.next = newTail;
+            newTail.prev = this.tail;
+            this.tail = newTail;
+        }
+        return this;
     }
     // EXTRA
     /**
@@ -65,7 +85,35 @@ class DoublyLinkedList {
      * @returns {any} The data of the removed node or null if no true middle
      */
     removeMiddleNode() {
-        //Your code here
+        //nothing to remove
+        if (this.isEmpty()) return null;
+
+        // when there is only 1 node, it is the middle, remove it.
+        if (this.head === this.tail) {
+            const removedData = this.head.data;
+            this.head = null;
+            this.tail = null;
+            return removedData;
+        }
+
+        let forwardRunner = this.head;
+        let backwardsRunner = this.tail;
+
+        while (forwardRunner && backwardsRunner) {
+            if (forwardRunner === backwardsRunner) {
+                const midNode = forwardRunner;
+                midNode.prev.next = midNode.next;
+                midNode.next.prev = midNode.prev;
+                return midNode.data;
+            }
+            // runners passed each other without stopping on the same node, even length, we can exit early
+            if (forwardRunner.prev === backwardsRunner) {
+                return null;
+            }
+            forwardRunner = forwardRunner.next;
+            backwardsRunner = backwardsRunner.prev;
+        }
+        return null;
     }
 
     /**
