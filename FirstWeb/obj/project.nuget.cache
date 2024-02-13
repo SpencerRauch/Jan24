@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "qEL001DWvqruMZDaZuhKOSaQ1qlFGAVSuy0pA4Qhq+5JnIfHlTzyee/v2Vk2IAakYOg/B9+k3y2+q1NG+HyCTQ==",
+  "dgSpecHash": "X6UeBPr3bRetBW6dS1GnKcIx4mUdaQaQHaks+myEPmxte5snn82cA5W8JqjhlwckM6yQHdht8ew3Iq9hvikkqg==",
   "success": true,
-  "projectFilePath": "C:\\stacks\\CSharp\\Jan24\\FirstWeb\\FirstWeb.csproj",
+  "projectFilePath": "C:\\dojofiles\\Jan24\\FirstWeb\\FirstWeb.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

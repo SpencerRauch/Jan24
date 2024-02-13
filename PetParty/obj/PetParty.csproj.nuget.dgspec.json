@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\stacks\\CSharp\\Jan24\\PetParty\\PetParty.csproj": {}
+    "C:\\dojofiles\\Jan24\\PetParty\\PetParty.csproj": {}
   },
   "projects": {
-    "C:\\stacks\\CSharp\\Jan24\\PetParty\\PetParty.csproj": {
+    "C:\\dojofiles\\Jan24\\PetParty\\PetParty.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\stacks\\CSharp\\Jan24\\PetParty\\PetParty.csproj",
+        "projectUniqueName": "C:\\dojofiles\\Jan24\\PetParty\\PetParty.csproj",
         "projectName": "PetParty",
-        "projectPath": "C:\\stacks\\CSharp\\Jan24\\PetParty\\PetParty.csproj",
+        "projectPath": "C:\\dojofiles\\Jan24\\PetParty\\PetParty.csproj",
         "packagesPath": "C:\\Users\\bizar\\.nuget\\packages\\",
-        "outputPath": "C:\\stacks\\CSharp\\Jan24\\PetParty\\obj\\",
+        "outputPath": "C:\\dojofiles\\Jan24\\PetParty\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bizar\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -56,7 +56,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

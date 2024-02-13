@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AtQUIEMwSyyCJEGAm+TjKDhOnxo9QI/BansXtJ0mArbOw6QRdPYQw4l2ZafyCJcGPrGlQ/MjBG0nMjO/MXy2WA==",
+  "dgSpecHash": "+inIEIOy2yBvyOc7gCsgE4/ZiXN1p84eBulsIN3M1Jg37TF8ki7ujLe9lAzyE4IOTaBh5L1uD6IpoeFTSzVfJg==",
   "success": true,
-  "projectFilePath": "C:\\stacks\\CSharp\\Jan24\\PetParty\\PetParty.csproj",
+  "projectFilePath": "C:\\dojofiles\\Jan24\\PetParty\\PetParty.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
